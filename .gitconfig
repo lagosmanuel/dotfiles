@@ -1,0 +1,21 @@
+[user]
+	name = lagosmanuel
+	email = lagosmanual@gmail.com
+	signingkey = 24BEBB65524C3970D5B5EF402461EE4D09F4C765
+[core]
+	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+    excludesfile = ~/.gitignore
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+[credential]
+	helper = store
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[diff]
+	renames = true
+[init]
+	defaultBrnach = main

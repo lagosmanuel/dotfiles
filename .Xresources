@@ -1,0 +1,11 @@
+XTerm*background: black
+XTerm*foreground: white
+    
+! get the font from: https://www.jetbrains.com/lp/mono/
+XTerm*renderFont: true
+XTerm*faceName: Jetbrains Mono
+XTerm*faceSize: 16
+
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.metaSendsEscape: true
