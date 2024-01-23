@@ -1,0 +1,8 @@
+# temporary files
+*~
+*.swp
+*.swo
+
+# editors
+.idea/
+.vscode

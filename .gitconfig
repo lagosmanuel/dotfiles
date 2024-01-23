@@ -1,0 +1,19 @@
+[user]
+    name = lagosmanuel
+    email = lagosmanual@gmail.com
+    signingkey = 24BEBB65524C3970D5B5EF402461EE4D09F4C765
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+    whitespace = fix,blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent,cr-at-eol
+    autocrlf = false
+[init]
+    defaultBranch = main
+[web]
+    browser = firefox
+[credential]
+    helper = cache --timeout=3600
+[pull]
+    rebase = true
+[commit]
+    gpgsign = true

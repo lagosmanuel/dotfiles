@@ -1,0 +1,6 @@
+alias ls='k -h'
+alias ll='k -h'
+alias la='k -ah'
+alias l='k -h'
+alias rm='rm -i'
+alias free='free -h'
