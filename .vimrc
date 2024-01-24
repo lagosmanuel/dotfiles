@@ -129,6 +129,8 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
 
@@ -191,9 +193,16 @@ let g:tmux_navigator_disable_when_zoomed = 1
 " If the tmux window is zoomed, keep it zoomed when moving from Vim to another pane.
 let g:tmux_navigator_preserve_zoom = 1
 
-" Tmux key bindings.
+" Define tmux navigator key bindings.
 noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
 noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
 noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
 noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
 noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+
+" UtilSnips: Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<enter>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
