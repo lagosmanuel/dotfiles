@@ -27,6 +27,7 @@ plugins=(git vi-mode git-auto-fetch git-prompt zsh-autosuggestions k tmux)
 
 export PATH=${PATH}
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export EDITOR='vim'
 export TERM='xterm'
 export LANG='en_US.UTF-8'
