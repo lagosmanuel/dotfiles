@@ -1,0 +1,5 @@
+# Ask cheat.sh website for details about a Linux command.
+cheat() {
+    curl "cheat.sh/${1}"
+    print "\ncommand: curl 'cheat.sh/${1}'"
+}
