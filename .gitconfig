@@ -17,3 +17,5 @@
     rebase = true
 [commit]
     gpgsign = true
+[alias]
+    tree = git log --oneline --graph --decorate --all
