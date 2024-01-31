@@ -18,4 +18,6 @@
 [commit]
     gpgsign = true
 [alias]
-    tree = git log --oneline --graph --decorate --all
+    tree = log --oneline --graph --decorate --all
+[merge]
+    tool = vimdiff
