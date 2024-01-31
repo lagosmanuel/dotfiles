@@ -127,6 +127,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'SirVer/ultisnips'
