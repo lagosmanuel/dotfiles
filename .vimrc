@@ -134,6 +134,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
+Plug 'junegunn/vim-easy-align'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
