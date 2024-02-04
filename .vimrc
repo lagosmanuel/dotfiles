@@ -105,11 +105,12 @@ set colorcolumn=120
 " Pop up menu to show the possible completions.
 set completeopt=longest,menuone
 
-" Auto change directory when a file is open.
-set autochdir
-
 " Cross-platform value configuration for clipboard.
 set clipboard^=unnamed,unnamedplus
+
+" Search down into subfolders,
+" provides tab-completion for all file-related tasks.
+set path+=**
 
 " Vim plugins using vim-plug manager. [https://github.com/junegunn/vim-plug]
 call plug#begin()
@@ -130,8 +131,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'altercation/vim-colors-solarized'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
