@@ -6,3 +6,6 @@
 # editors
 .idea/
 .vscode
+
+# ctags
+tags
