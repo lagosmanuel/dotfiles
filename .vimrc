@@ -166,19 +166,6 @@ let g:netrw_keepdir = 0
 " Toggle Lexplore with Ctrl-F.
 map <silent> <C-F> :Lexplore<CR>
 
-" Start Vexplore
-" augroup ProjectDrawer
-"      autocmd!
-"        autocmd VimEnter * :Vexplore
-"        autocmd VimEnter * wincmd p
-" augroup END
-
-" Window navigation.
-noremap <C-j> <C-W>j
-noremap <C-k> <C-W>k
-noremap <C-h> <C-W>h
-noremap <C-l> <C-W>l
-
 " Define custom tmux navigator maps.
 let g:tmux_navigator_no_mappings = 1
 
@@ -197,6 +184,9 @@ noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
 noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
 noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
 noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+
+" Map the <Plug>NetrwRefresh command to something else to release <C-l> map.
+nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
 
 " Generate tags recursively in the working dir. (req. ctags installed).
 command! MakeTags !ctags -R .
