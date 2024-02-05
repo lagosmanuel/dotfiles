@@ -30,7 +30,7 @@ export PATH=${PATH}
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export EDITOR='vim'
-export TERM='xterm'
+export TERM='xterm-256color'
 export LANG='en_US.UTF-8'
 export ARCHFLAGS='-arch x86_64'
 
