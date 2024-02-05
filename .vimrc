@@ -52,6 +52,9 @@ if !isdirectory(expand(&directory))
     call mkdir(expand(&directory), "p")
 endif
 
+" Buffer becomes hidden when it is abandoned.
+set hidden
+
 " Enable virtual line wrapping.
 set wrap
 
