@@ -1,3 +1,4 @@
+" > Settings
 " Vim's default behavior.
 if &compatible
   set nocompatible
@@ -115,6 +116,19 @@ set clipboard^=unnamed,unnamedplus
 " provides tab-completion for all file-related tasks.
 set path+=**
 
+" Turn syntax highlighting on.
+syntax on
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
+
+" Load an indent file for the detected file type.
+filetype indent on
+
+" > Plugins
 " Vim plugins using vim-plug manager. [https://github.com/junegunn/vim-plug]
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -142,23 +156,29 @@ call plug#end()
 "   filetype indent off   " Disable file-type-specific indentation
 "   syntax off            " Disable syntax highlighting
 
-" Turn syntax highlighting on.
-syntax on
-
-" Enable type file detection. Vim will be able to try to detect the type of file in use.
-filetype on
-
-" Enable plugins and load plugin for the detected file type.
-filetype plugin on
-
-" Load an indent file for the detected file type.
-filetype indent on
-
-" Set colorscheme.
+" > Color
 colorscheme solarized
 set background=dark
 
-" Explore (netrw) configuration.
+" > Keybindings
+" Toggle Lexplore with Ctrl-F.
+map <silent> <C-F> :Lexplore<CR>
+
+" Window navigation
+noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
+noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
+noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
+noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
+noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+
+" Map the <Plug>NetrwRefresh command to something else to release <C-l> map.
+nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
+
+" > Commands
+" Generate tags recursively in the working dir. (req. ctags installed).
+command! MakeTags !ctags -R .
+
+" > Netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
@@ -166,9 +186,7 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 20
 let g:netrw_keepdir = 0
 
-" Toggle Lexplore with Ctrl-F.
-map <silent> <C-F> :Lexplore<CR>
-
+" > TMUX
 " Define custom tmux navigator maps.
 let g:tmux_navigator_no_mappings = 1
 
@@ -180,16 +198,3 @@ let g:tmux_navigator_disable_when_zoomed = 1
 
 " If the tmux window is zoomed, keep it zoomed when moving from Vim to another pane.
 let g:tmux_navigator_preserve_zoom = 1
-
-" Define tmux navigator key bindings.
-noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
-noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
-noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
-noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
-noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
-
-" Map the <Plug>NetrwRefresh command to something else to release <C-l> map.
-nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
-
-" Generate tags recursively in the working dir. (req. ctags installed).
-command! MakeTags !ctags -R .
