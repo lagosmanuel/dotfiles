@@ -20,13 +20,11 @@ font pango:Jetbrains Mono 14 # [https://www.jetbrains.com/lp/mono/]
 #font pango:DejaVu Sans Mono 8
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
-gaps inner 20
+# gaps inner 20
 
 # Set the wallpaper
 # exec --no-startup-id xsetroot -solid "#000"
-# [https://pixabay.com/es/illustrations/agujero-de-gusano-espacio-tiempo-739872/]
 exec xwallpaper --stretch ~/.config/wallpaper.png
-exec_always compton
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
