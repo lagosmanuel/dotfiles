@@ -142,6 +142,7 @@ call plug#begin()
 " Make sure you use single quotes
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
