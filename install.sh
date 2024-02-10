@@ -12,6 +12,10 @@ then
 fi
 $(mkdir $BACKUP_DIR)
 
+# install the dependencies.
+read -e -p "install the dependencies? y/n: " -N 1
+[ "$REPLY" = "y" ] && $DFILES_DIR/dependencies.sh
+
 # find the dotfiles.
 dotfiles=$(find $DFILES_DIR -type f -name "*" \
      -not -name README.md \
@@ -20,6 +24,7 @@ dotfiles=$(find $DFILES_DIR -type f -name "*" \
      -not -path "$DFILES_DIR/.git/*" \
      -printf "%P\n")
 
+# make the backup before updating the repo.
 for file in $dotfiles
 do
     # if the path to the file doesn't exist in the destination dir, make it.
@@ -28,11 +33,20 @@ do
     # if the file exist in the destination dir, make a backup and delete the old one.
     if [ -e $DEST_DIR/$file ]
     then
-        cp $DEST_DIR/$file $BACKUP_DIR       # backup the org file.
-        rm $DEST_DIR/$file                   # delete the old file.
+        cp $DEST_DIR/$file $BACKUP_DIR  # backup the org file.
+        rm $DEST_DIR/$file              # delete the old file.
     fi
+done
 
-    ln -s $DFILES_DIR/$file $DEST_DIR/$file  # link the new file.
+# update the repo.
+echo "updating the repository..."
+git pull origin main
+[ $? -gt 0 ] && exit 1;
+
+# create the links.
+for file in $dotfiles
+do
+    ln -s $DFILES_DIR/$file $DEST_DIR/$file
 done
 
 echo "the dotfiles have been installed!"
