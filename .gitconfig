@@ -1,7 +1,7 @@
 [user]
     name = lagosmanuel
     email = lagosmanual@gmail.com
-    signingkey = 24BEBB65524C3970D5B5EF402461EE4D09F4C765
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJjqOLtoE4U3DcWFrKihUliOJcO5/TSWfcTJ84zh4NSk
 [core]
     editor = vim
     excludesfile = ~/.gitignore
@@ -21,3 +21,5 @@
     tree = log --oneline --graph --decorate --all
 [merge]
     tool = vimdiff
+[gpg]
+	format = ssh
