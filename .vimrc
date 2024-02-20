@@ -162,8 +162,8 @@ colorscheme solarized
 set background=dark
 
 " > Keybindings
-" Toggle Lexplore with Ctrl-F.
-map <silent> <C-F> :Lexplore<CR>
+" Toggle Lexplore with Ctrl-n.
+map <silent> <C-n> :Lexplore<CR>
 
 " Window navigation
 noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
