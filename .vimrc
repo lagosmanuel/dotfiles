@@ -149,6 +149,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'altercation/vim-colors-solarized'
+Plug 'embear/vim-localvimrc'
+
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -198,3 +200,6 @@ let g:tmux_navigator_disable_when_zoomed = 1
 
 " If the tmux window is zoomed, keep it zoomed when moving from Vim to another pane.
 let g:tmux_navigator_preserve_zoom = 1
+
+" > Localvimrc
+let g:localvimrc_ask = 0
