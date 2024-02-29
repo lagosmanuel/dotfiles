@@ -151,7 +151,6 @@ Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'junegunn/vim-easy-align'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'altercation/vim-colors-solarized'
 Plug 'embear/vim-localvimrc'
 
 
@@ -163,7 +162,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 " > Color
-colorscheme solarized
+colorscheme pablo
 set background=dark
 
 " > Mappings
