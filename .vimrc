@@ -7,14 +7,17 @@ endif
 " Add numbers to each line on the left-hand side.
 set number
 
+" Relative numbers for jumping.
+set number relativenumber   
+
+" Show the current line number.
+set nu rnu  
+
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
-" Relative numbers for jumping
-set number relativenumber   
-
-" Show the current line number
-set nu rnu  
+" Minimal number of lines to scroll when the cursor gets off the screen (default 1)
+set scrolloff=10
 
 " Set shift width to 4 spaces.
 set shiftwidth=4
