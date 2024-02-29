@@ -4,16 +4,26 @@ DFILES_DIR=$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)  # get the path to
 BACKUP_DIR=$DFILES_DIR/backup                                  # here will be saved the original dotfiles.
 DEST_DIR=${1:-$HOME}                                           # here will be installed the dotfiles, by default home.
 
+# Regular Colors
+BLACK=$'\033[0;30m'        # Black
+RED=$'\033[0;31m'          # Red
+GREEN=$'\033[0;32m'        # Green
+YELLOW=$'\033[0;33m'       # Yellow
+BLUE=$'\033[0;34m'         # Blue
+PURPLE=$'\033[0;35m'       # Purple
+CYAN=$'\033[0;36m'         # Cyan
+WHITE=$'\033[0;37m'        # White
+
 # make the backup dir.
 if [ -e $BACKUP_DIR ]
 then
-    echo -e "the backup dir already exists, please make sure you save it somewhere else and run it again.\n$BACKUP_DIR"
+    echo -e "${RED}the backup dir already exists, please make sure you save it somewhere else and run it again.\n$BACKUP_DIR"
     exit 1
 fi
 $(mkdir $BACKUP_DIR)
 
 # install the dependencies.
-read -e -p "install the dependencies? y/n: " -N 1
+read -e -p "${PURPLE}do you want to install the dependencies? y/n: ${BLUE}" -N 1
 [ "$REPLY" = "y" ] && $DFILES_DIR/dependencies.sh
 
 # find the dotfiles.
@@ -41,7 +51,7 @@ done
 # update the repo.
 echo "updating the repository..."
 git pull origin main
-[ $? -gt 0 ] && exit 1;
+[ $? -gt 0 ] && echo "${RED}ERROR: failed to update the repository" && exit 1;
 
 # create the links.
 for file in $dotfiles
@@ -49,4 +59,4 @@ do
     ln -s $DFILES_DIR/$file $DEST_DIR/$file
 done
 
-echo "the dotfiles have been installed!"
+echo "${GREEN}the dotfiles have been installed!"
