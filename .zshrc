@@ -26,7 +26,7 @@ plugins=(git vi-mode git-auto-fetch git-prompt zsh-autosuggestions k tmux)
 # User configuration
 # ZSH_TMUX_AUTOSTART=true
 
-export PATH=${PATH}
+export PATH=${PATH}:/opt/nvim-linux64/bin/
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export EDITOR='vim'
