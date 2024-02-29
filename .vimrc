@@ -166,9 +166,12 @@ call plug#end()
 colorscheme solarized
 set background=dark
 
-" > Keybindings
-" Toggle Lexplore with Ctrl-n.
-map <silent> <C-n> :Lexplore<CR>
+" > Mappings
+" Set the leader key
+let mapleader=' '
+
+" Open Explore with <leader>pv.
+map <silent> <leader>pv :Explore<CR>
 
 " Window navigation
 noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
