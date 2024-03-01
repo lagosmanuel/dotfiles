@@ -169,6 +169,10 @@ set background=dark
 " Set the leader key
 let mapleader=' '
 
+" Disable these keybindings
+map Q <nop>
+map q: <nop>
+
 " Open Explore with <leader>pv.
 map <silent> <leader>pv :Explore<CR>
 
