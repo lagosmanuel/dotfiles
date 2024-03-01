@@ -51,7 +51,7 @@ done
 # update the repo.
 echo "updating the repository..."
 git pull origin main
-[ $? -gt 0 ] && echo "${RED}ERROR: failed to update the repository" && exit 1;
+[ $? -gt 0 ] && echo "${RED}ERROR: failed to update the repository${WHITE}" && exit 1;
 
 # create the links.
 for file in $dotfiles
@@ -59,4 +59,4 @@ do
     ln -s $DFILES_DIR/$file $DEST_DIR/$file
 done
 
-echo "${GREEN}the dotfiles have been installed!"
+echo "${GREEN}the dotfiles have been installed!${WHITE}"
