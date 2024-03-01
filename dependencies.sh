@@ -44,7 +44,7 @@ read -e -p "would you like to install the jetbrains mono font? y/n: " -N 1
 echo "${YELLOW}IMPORTANT: after installing oh-my-zsh please type 'exit' and press enter to continue with the installer.\n${BLUE}"
 read -e -p "would you like to install oh-my-zsh? y/n: " -N 1
 [ "$REPLY" = "y" ] \
-    && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended --keep-zshrc"
 
 # zsh k plugin.
 read -e -p "would you like to install zsh plugin k? y/n: " -N 1

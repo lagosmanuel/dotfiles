@@ -22,10 +22,6 @@ then
 fi
 $(mkdir $BACKUP_DIR)
 
-# install the dependencies.
-read -e -p "${PURPLE}do you want to install the dependencies? y/n: ${BLUE}" -N 1
-[ "$REPLY" = "y" ] && $DFILES_DIR/dependencies.sh
-
 # find the dotfiles.
 dotfiles=$(find $DFILES_DIR -type f -name "*" \
      -not -name README.md \
@@ -60,3 +56,8 @@ do
 done
 
 echo "${GREEN}the dotfiles have been installed!${WHITE}"
+
+# install the dependencies.
+read -e -p "${PURPLE}do you want to install the dependencies? y/n: ${BLUE}" -N 1
+[ "$REPLY" = "y" ] && $DFILES_DIR/dependencies.sh
+
