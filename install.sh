@@ -17,7 +17,7 @@ WHITE=$'\033[0;37m'        # White
 # make the backup dir.
 if [ -e $BACKUP_DIR ]
 then
-    echo -e "${RED}the backup dir already exists, please make sure you save it somewhere else and run it again.\n$BACKUP_DIR"
+    echo -e "${RED}the backup dir already exists, please make sure you save it somewhere else and run it again.\n$BACKUP_DIR${WHITE}"
     exit 1
 fi
 $(mkdir $BACKUP_DIR)
@@ -55,9 +55,8 @@ do
     ln -s $DFILES_DIR/$file $DEST_DIR/$file
 done
 
-echo "${GREEN}the dotfiles have been installed!${WHITE}"
-
 # install the dependencies.
 read -e -p "${PURPLE}do you want to install the dependencies? y/n: ${BLUE}" -N 1
 [ "$REPLY" = "y" ] && $DFILES_DIR/dependencies.sh
 
+echo "${GREEN}the dotfiles have been installed!${WHITE}"
