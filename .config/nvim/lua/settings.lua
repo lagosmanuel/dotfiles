@@ -16,9 +16,9 @@ opt.backup=true -- Enable backup files.
 opt.swapfile=true -- Enable swap files.
 opt.undolevels=1000 -- Number of changes that can be undone.
 opt.undoreload=10000 -- Save the whole buffer for undo when reoloading it. 
-opt.undodir=os.getenv('HOME')..'/.vim/tmp/undo//' -- Set the undo directory.
-opt.backupdir=os.getenv('HOME')..'/.vim/tmp/backup//' -- Set the backup directory.
-opt.directory=os.getenv('HOME')..'/.vim/tmp/swap//' -- Set the swap directory.
+opt.undodir=os.getenv('HOME')..'/.nvim/tmp/undo//' -- Set the undo directory.
+opt.backupdir=os.getenv('HOME')..'/.nvim/tmp/backup//' -- Set the backup directory.
+opt.directory=os.getenv('HOME')..'/.nvim/tmp/swap//' -- Set the swap directory.
 
 -- Make those folders automatically if they don't already exist.
 -- if !isdirectory(expand(&undodir))
