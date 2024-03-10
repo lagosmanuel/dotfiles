@@ -1,7 +1,5 @@
-[user]
-    name = lagosmanuel
-    email = lagosmanual@gmail.com
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJjqOLtoE4U3DcWFrKihUliOJcO5/TSWfcTJ84zh4NSk
+[include]
+    path = ~/.gitconfig.personal
 [core]
     editor = vim
     excludesfile = ~/.gitignore
@@ -19,6 +17,8 @@
     gpgsign = true
 [alias]
     tree = log --oneline --graph --decorate --all
+    blaame = blame -w -C -C -C 
+    staash = stash --all
 [merge]
     tool = vimdiff
 [gpg]
