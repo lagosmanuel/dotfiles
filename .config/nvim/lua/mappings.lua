@@ -1,6 +1,7 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q:", "<nop>")
+vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {})
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {})
