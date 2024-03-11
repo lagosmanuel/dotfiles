@@ -20,5 +20,5 @@ return require('packer').startup(function(use)
   use {'neovim/nvim-lspconfig', config = [[ require('plugins.lsp') ]]}
   use {'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = {{'nvim-lua/plenary.nvim'}}}
 
-  config = [[require('plugins.netrw')]]
+  require('plugins.netrw')
 end)
