@@ -173,8 +173,8 @@ let mapleader=' '
 map Q <nop>
 map q: <nop>
 
-" Open Explore with <leader>pv.
-map <silent> <leader>pv :Explore<CR>
+" Open Lexplore with <leader>pv.
+map <silent> <leader>pv :Lexplore<CR>
 
 " Window navigation
 noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
@@ -191,7 +191,7 @@ nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
 command! MakeTags !ctags -R .
 
 " > Netrw
-let g:netrw_banner = 1
+let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
