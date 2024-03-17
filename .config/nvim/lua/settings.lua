@@ -2,9 +2,8 @@ local g   = vim.g
 local opt = vim.opt
 
 g.mapleader = ' ' -- Set the leader key.
-opt.number=true -- Add numbers to each line on the left-hand side.
 opt.relativenumber=true -- Relative numbers for jumping.
-opt.rnu=true -- Show the current line number.
+opt.number=true -- Show the current line number.
 opt.cursorline=true -- Highlight cursor line underneath the cursor horizontally.
 opt.scrolloff=10 -- " Minimal number of lines to scroll when the cursor gets off the screen (default 1).
 opt.shiftwidth=4 -- Set shift width to 4 spaces.

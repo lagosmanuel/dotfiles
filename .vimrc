@@ -10,9 +10,6 @@ set number
 " Relative numbers for jumping.
 set number relativenumber   
 
-" Show the current line number.
-set nu rnu  
-
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
