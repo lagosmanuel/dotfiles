@@ -25,6 +25,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu dmenu_path | j4-dmenu-desktop | xargs swaymsg exec --
 
+gaps inner 15
 
 include /etc/sway/config-vars.d/*
 
