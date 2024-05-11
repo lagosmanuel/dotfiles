@@ -21,7 +21,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=red,underline"
 # https://github.com/supercrabtree/k
 # https://github.com/zpm-zsh/tmux
 
-plugins=(git vi-mode git-auto-fetch git-prompt zsh-autosuggestions k tmux)
+plugins=(git vi-mode git-auto-fetch git-prompt zsh-autosuggestions tmux)
 
 # User configuration
 # ZSH_TMUX_AUTOSTART=true
