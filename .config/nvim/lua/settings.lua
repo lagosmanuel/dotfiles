@@ -47,7 +47,7 @@ opt.wildmenu=true -- Enable auto completion menu after pressing TAB.
 opt.belloff=all -- Disable bell sounds.
 opt.encoding='utf-8' -- Encoding.
 opt.ruler=true -- Show file stats.
-opt.colorcolumn='120' -- Show column at 120 characters.
+opt.colorcolumn='80' -- Show column at 80 characters.
 opt.completeopt='longest,menuone' -- Pop up menu to show the possible completions.
 opt.clipboard='unnamed,unnamedplus' -- Cross-platform value configuration for clipboard.
 opt.path:append '**' -- Search down into subfolders, provides tab-completion for all file-related tasks.

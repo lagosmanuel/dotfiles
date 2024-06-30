@@ -103,8 +103,8 @@ set encoding=utf-8
 " Show file stats.
 set ruler
 
-" Show column at 120 characters.
-set colorcolumn=120
+" Show column at 80 characters.
+set colorcolumn=80
 
 " Pop up menu to show the possible completions.
 set completeopt=longest,menuone
