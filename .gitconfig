@@ -19,6 +19,7 @@
     tree = log --oneline --graph --decorate --all
     blaame = blame -w -C -C -C 
     staash = stash --all
+    wdiff = diff --word-diff
 [merge]
     tool = vimdiff
 [gpg]
