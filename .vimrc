@@ -159,7 +159,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 " > Color
-colorscheme pablo
+colorscheme wildcharm
 set background=dark
 
 " > Mappings
